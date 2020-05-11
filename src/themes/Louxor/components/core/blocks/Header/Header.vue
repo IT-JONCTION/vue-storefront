@@ -1,38 +1,33 @@
 <template>
   <div class="header">
     <header
-      class="fixed w-100 brdr-bottom-1 bg-cl-primary brdr-cl-secondary"
+      class="fixed w-100 brdr-bottom-1 brdr-cl-secondary"
       :class="{ 'is-visible': navVisible }"
     >
-      <div class="container px15">
+      <div class="p30 pb15 bg-cl-capi-blue">
         <div class="row between-xs middle-xs" v-if="!isCheckoutPage || isThankYouPage">
-          <div class="col-md-4 col-xs-2 middle-xs">
+          <!-- <div class="col-md-4 col-xs-2 middle-xs">
             <div>
               <hamburger-icon class="p15 icon bg-cl-secondary pointer" />
             </div>
-          </div>
-          <div class="col-xs-2 visible-xs">
-            <search-icon class="p15 icon pointer" />
-          </div>
-          <div class="col-md-4 col-xs-4 center-xs pt5">
+          </div> -->
+          <div class="col-md-2 col-xs-4 pt5">
             <div>
               <logo width="auto" height="41px" />
             </div>
           </div>
-          <div class="col-xs-2 visible-xs">
-            <wishlist-icon class="p15 icon pointer" />
+          <div class="col-md-7 col-xs-2">
+            <search-bar class="p15 hidden-xs pointer" />
           </div>
-          <div class="col-md-4 col-xs-2 end-xs">
+          <div class="col-md-3 col-xs-2 end-xs">
             <div class="inline-flex right-icons">
-              <search-icon class="p15 icon hidden-xs pointer" />
-              <wishlist-icon class="p15 icon hidden-xs pointer" />
-              <compare-icon class="p15 icon hidden-xs pointer" />
-              <microcart-icon class="p15 icon pointer" />
-              <account-icon class="p15 icon hidden-xs pointer" />
+              <contact-icon class="p15 mx5 icon hidden-xs pointer" />
+              <account-icon class="p15 mx5 icon hidden-xs pointer" />
+              <microcart-icon class="p15 mx5 icon pointer" />
             </div>
           </div>
         </div>
-        <div class="row between-xs middle-xs px15 py5" v-if="isCheckoutPage && !isThankYouPage">
+        <!-- <div class="row between-xs middle-xs px15 py5" v-if="isCheckoutPage && !isThankYouPage">
           <div class="col-xs-5 col-md-3 middle-xs">
             <div>
               <router-link
@@ -57,6 +52,14 @@
               <span v-else>{{ $t('You are logged in as {firstname}', currentUser) }}</span>
             </div>
           </div>
+        </div> -->
+      </div>
+      <div class="bg-cl-capi-medium inline-flex w-100">
+        <div class="col-md-6 col-xs-2 middle-xs py10">
+          <hamburger-icon class="p15 pointer px30" />
+        </div>
+        <div class="col-md-6 py10 px30 flex jc-end ai-center">
+          <Feedbacks />
         </div>
       </div>
     </header>
@@ -68,23 +71,29 @@
 import { mapState } from 'vuex'
 import CurrentPage from 'theme/mixins/currentPage'
 import AccountIcon from 'theme/components/core/blocks/Header/AccountIcon'
-import CompareIcon from 'theme/components/core/blocks/Header/CompareIcon'
+// import CompareIcon from 'theme/components/core/blocks/Header/CompareIcon'
 import HamburgerIcon from 'theme/components/core/blocks/Header/HamburgerIcon'
 import Logo from 'theme/components/core/Logo'
 import MicrocartIcon from 'theme/components/core/blocks/Header/MicrocartIcon'
-import SearchIcon from 'theme/components/core/blocks/Header/SearchIcon'
-import WishlistIcon from 'theme/components/core/blocks/Header/WishlistIcon'
+import ContactIcon from 'theme/components/core/blocks/Header/ContactIcon'
+import Feedbacks from 'theme/components/core/blocks/Header/Feedbacks'
+// import SearchIcon from 'theme/components/core/blocks/Header/SearchIcon'
+import SearchBar from 'theme/components/core/blocks/Header/SearchBar'
+// import WishlistIcon from 'theme/components/core/blocks/Header/WishlistIcon'
 
 export default {
   name: 'Header',
   components: {
     AccountIcon,
-    CompareIcon,
+    // CompareIcon,
     HamburgerIcon,
     Logo,
     MicrocartIcon,
-    SearchIcon,
-    WishlistIcon
+    ContactIcon,
+    Feedbacks,
+    // SearchIcon,
+    // WishlistIcon,
+    SearchBar
   },
   mixins: [CurrentPage],
   data () {
@@ -146,20 +155,23 @@ export default {
 <style lang="scss" scoped>
 @import '~theme/css/variables/colors';
 @import '~theme/css/helpers/functions/color';
-$color-icon-hover: color(secondary, $colors-background);
+$color-icon-hover: color(primary, $colors-border);
 
 header {
-  height: 54px;
+  height: 100px;
   top: -55px;
   z-index: 3;
+  // padding: 30px 30px 15px 30px;
   transition: top 0.2s ease-in-out;
   &.is-visible {
     top: 0;
   }
 }
 .icon {
-  opacity: 0.6;
-  &:hover,
+  &:hover {
+    border: 1px solid $color-icon-hover;
+    border-radius: 5px;
+  }
   &:focus {
     background-color: $color-icon-hover;
     opacity: 1;

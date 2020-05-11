@@ -2,8 +2,7 @@
   <button
     type="button"
     :aria-label="$t('Open search panel')"
-    class="bg-cl-transparent brdr-none inline-flex"
-    @click="toggleSearchpanel"
+    class="bg-cl-capi-light brdr-none cl-white inline-flex"
     data-testid="openSearchPanel"
   >
     <i class="material-icons">search</i>

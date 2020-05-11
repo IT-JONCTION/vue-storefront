@@ -3,7 +3,7 @@
     <img
       :width="width"
       :height="height"
-      src="/assets/logo.svg"
+      src="/assets/capitools-logo.jpg"
       :alt="$t(defaultTitle)"
     >
   </router-link>

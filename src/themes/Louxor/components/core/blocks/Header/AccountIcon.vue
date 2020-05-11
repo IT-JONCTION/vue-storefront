@@ -12,9 +12,12 @@
   >
     <button
       type="button"
-      class="bg-cl-transparent brdr-none p0"
+      class="bg-cl-transparent brdr-none p0 cl-white inline-flex"
     >
       <i class="material-icons block">account_circle</i>
+      <div class="fs-medium">
+        Compte
+      </div>
     </button>
 
     <no-ssr>

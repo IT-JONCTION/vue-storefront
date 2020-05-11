@@ -19,8 +19,15 @@ $colors: (
   buccaneer: #755,
   forest-green: #308c14,
   puerto-rico: #4dba87,
-  mine-shaft: #333
+  mine-shaft: #333,
+  capi-blue: #2D415A,
+  capi-medium: #314B74,
+  capi-light: #3B78DD
 );
+
+.test {
+  color: red;
+}
 
 // Theme generic colors
 // Key: name of color
@@ -45,7 +52,7 @@ $colors-theme: (
 );
 
 $colors-border: (
-  primary: map-get($colors, silver),
+  primary: map-get($colors, capi-light),
   secondary: map-get($colors, gainsboro),
 );
 

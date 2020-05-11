@@ -6,6 +6,18 @@
   display: flex;
 }
 
+.jc-center {
+  justify-content: center;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.ai-center {
+  align-items: center;
+}
+
 .block {
   display: block;
 }
