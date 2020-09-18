@@ -26,14 +26,14 @@ export default {
   methods: {
     subscribe (success?: Function, failure?: Function) {
       // argument omitted for validation purposes
-      if (!this.$v.$invalid) {
-        return this.$store.dispatch('newsletter/subscribe', this.email).then(res => {
-          if (success) success(res)
-        }).catch(err => {
-          if (failure) failure(err)
-        }
-        )
+      // if (!this.$v.$invalid) {
+      return this.$store.dispatch('newsletter/subscribe', this.email).then(res => {
+        if (success) success(res)
+      }).catch(err => {
+        if (failure) failure(err)
       }
+      )
+      // }
     }
   }
 }
