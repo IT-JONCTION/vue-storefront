@@ -14,6 +14,3 @@
 	path = src/modules/payment-stripe
 	url = https://github.com/IT-JONCTION/vsf-payment-stripe.git
 	branch = master
-[submodule "src/themes/vsf-capybara"]
-	path = src/themes/vsf-capybara
-	url = https://github.com/IT-JONCTION/vsf-capybara.git
