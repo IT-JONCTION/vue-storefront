@@ -26,7 +26,6 @@ COPY tsconfig-build.json /var/www/tsconfig-build.json
 COPY shims.d.ts /var/www/shims.d.ts
 COPY package.json /var/www/package.json
 COPY src /var/www/src
-COPY var /var/www/var
 COPY packages /var/www/packages
 
 CMD ["vue-storefront.sh"]

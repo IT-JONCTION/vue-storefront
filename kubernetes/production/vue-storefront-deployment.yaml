@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: vue-storefront
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: vue-storefront
@@ -11,6 +12,7 @@ spec:
       labels:
         app: vue-storefront
     spec:
+      restartPolicy: Always
       containers:
       - name: vue-storefront
         image: docker.pkg.github.com/it-jonction/vue-storefront/vue-storefront:0.0.1
@@ -22,13 +24,14 @@ spec:
         volumeMounts:
         - mountPath: /var/www/var
           name: code
-          subPath: var
-        - mountPath: /var/www/dist
-          name: dist
+#        - mountPath: /var/www/dist
+#          name: dist
       volumes:
       - name: code
         emptyDir:
           medium: Memory
-      - name: dist
-        emptyDir:
-          medium: Memory
+#      - name: dist
+#        emptyDir:
+#          medium: Memory
+      imagePullSecrets:
+        - name: regcred
