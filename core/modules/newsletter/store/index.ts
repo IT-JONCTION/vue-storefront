@@ -39,7 +39,7 @@ export const newsletterStore: Module<NewsletterState, any> = {
       return isSubscribed
     },
     async subscribe ({ commit, getters, dispatch }, email): Promise<boolean> {
-      // if (getters.isSubscribed) return
+      if (getters.isSubscribed) return
 
       const subscribeResponse = await NewsletterService.subscribe(email)
 
@@ -50,7 +50,7 @@ export const newsletterStore: Module<NewsletterState, any> = {
       return subscribeResponse
     },
     async unsubscribe ({ commit, getters }, email): Promise<boolean> {
-      // if (!getters.isSubscribed) return
+      if (!getters.isSubscribed) return
 
       const unsubscribeResponse = await NewsletterService.unsubscribe(email)
       commit(types.NEWSLETTER_UNSUBSCRIBE)
