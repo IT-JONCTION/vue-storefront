@@ -7,7 +7,10 @@ import ReviewState from '../types/ReviewState';
 export const reviewStore: Module<ReviewState, RootState> = {
   namespaced: true,
   state: {
-    items: []
+    items: [],
+    review_count_collection: [
+      { product_Id: null, review_Count: null , rating_Count: null }
+   ]
   },
   actions,
   mutations

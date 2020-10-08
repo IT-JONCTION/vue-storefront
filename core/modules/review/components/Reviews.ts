@@ -5,6 +5,9 @@ export const Reviews = {
   computed: {
     reviews (): Review[] {
       return this.$store.state.review.items.items
+    },
+    reviewCountCollection (): Review[] {
+      return this.$store.state.review.review_count_collection
     }
   }
 }
