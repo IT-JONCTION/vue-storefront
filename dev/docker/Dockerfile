@@ -8,7 +8,7 @@ COPY . .
 
 # Should be yarn install --production
 RUN apt update && apt install -y git \
-  && yarn install \
+  && yarn install --frozen-lockfile\
   && yarn build
 
 COPY dev/docker/vue-storefront.sh /usr/local/bin/
