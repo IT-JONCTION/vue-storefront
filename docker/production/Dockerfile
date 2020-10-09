@@ -21,12 +21,9 @@ COPY ecosystem.json /var/www/ecosystem.json
 COPY .eslintignore /var/www/.eslintignore
 COPY .eslintrc.js /var/www/.eslintrc.js
 COPY lerna.json /var/www/lerna.json
-COPY tsconfig.json /var/www/tsconfig.json
-COPY tsconfig-build.json /var/www/tsconfig-build.json
-COPY shims.d.ts /var/www/shims.d.ts
 COPY package.json /var/www/package.json
 COPY src /var/www/src
-COPY dist /var/www/dist
-COPY packages /var/www/packages
+RUN mkdir /var/www/var
+RUN mkdir /var/www/dist
 
 CMD ["vue-storefront.sh"]

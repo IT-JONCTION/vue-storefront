@@ -24,14 +24,14 @@ spec:
         volumeMounts:
         - mountPath: /var/www/var
           name: code
-#        - mountPath: /var/www/dist
-#          name: dist
+        - mountPath: /var/www/dist
+          name: dist
       volumes:
       - name: code
         emptyDir:
           medium: Memory
-#      - name: dist
-#        emptyDir:
-#          medium: Memory
+      - name: dist
+        emptyDir:
+          medium: Memory
       imagePullSecrets:
         - name: regcred
