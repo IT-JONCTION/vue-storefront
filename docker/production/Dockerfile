@@ -1,29 +1,19 @@
-FROM node:10-alpine
+FROM node:10
 
-ENV VS_ENV prod
+ENV NODE_CONFIG_ENV=docker PM2_ARGS=--no-daemon BIND_HOST=0.0.0.0 VS_ENV=prod
 
 WORKDIR /var/www
 
-COPY package.json ./
-COPY yarn.lock ./
+COPY . .
 
-RUN apk add --no-cache --virtual .build-deps ca-certificates wget python make g++ \
-  && apk add --no-cache git \
-  && yarn install --no-cache \
-  && apk del .build-deps
+RUN cp -f ./docker/production/ecosystem.json ./ecosystem.json
 
-COPY docker/vue-storefront/vue-storefront.sh /usr/local/bin/
+# Should be yarn install --production
+RUN apt update && apt install -y git \
+  && yarn install \
+  && yarn build
 
-COPY babel.config.js /var/www/babel.config.js
-COPY config /var/www/config
-COPY core /var/www/core
-COPY ecosystem.json /var/www/ecosystem.json
-COPY .eslintignore /var/www/.eslintignore
-COPY .eslintrc.js /var/www/.eslintrc.js
-COPY lerna.json /var/www/lerna.json
-COPY package.json /var/www/package.json
-COPY src /var/www/src
-RUN mkdir /var/www/var
-RUN mkdir /var/www/dist
+COPY dev/docker/vue-storefront.sh /usr/local/bin/
+RUN chmod a+x /usr/local/bin/vue-storefront.sh
 
-CMD ["vue-storefront.sh"]
+ENTRYPOINT ["vue-storefront.sh"]

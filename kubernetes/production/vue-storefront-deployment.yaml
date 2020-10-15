@@ -15,7 +15,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: vue-storefront
-        image: docker.pkg.github.com/it-jonction/vue-storefront/vue-storefront:0.0.5
+        image: docker.pkg.github.com/it-jonction/vue-storefront/vue-storefront:0.0.10
         envFrom:
         - configMapRef:
             name: vue-storefront-config
@@ -24,13 +24,8 @@ spec:
         volumeMounts:
         - mountPath: /var/www/var
           name: code
-        - mountPath: /var/www/dist
-          name: dist
       volumes:
       - name: code
-        emptyDir:
-          medium: Memory
-      - name: dist
         emptyDir:
           medium: Memory
       imagePullSecrets:
