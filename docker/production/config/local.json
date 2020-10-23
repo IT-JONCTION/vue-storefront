@@ -3,10 +3,16 @@
     "host": "localhost"
   },
   "api": {
-    "url": "http://api.capitools.co.uk:8080"
+    "url": "http://prod.capitools.co.uk"
   },
   "elasticsearch": {
-    "index": "vue_storefront_magento_11_1600351613"
+    "index": "vue_storefront_capitools_production"
+  },
+  "redis": {
+    "host": "10.245.176.214",
+    "port": "6379",
+    "db": 0,
+    "auth": false
   },
   "defaultStoreCode": "capitools",
   "storeViews": {
@@ -24,7 +30,7 @@
       "appendStoreCode": true,
       "elasticsearch": {
         "host": "/api/catalog",
-        "index": "vue_storefront_magento"
+        "index": "vue_storefront_capitools_production"
       },
       "tax": {
         "sourcePriceIncludesTax": false,
@@ -96,7 +102,7 @@
     }
   },
   "images": {
-    "baseUrl": "http://api.capitools.co.uk:8080/img/"
+    "baseUrl": "http://prod.capitools.co.uk/img/"
   },
   "demomode": false,
   "tax": {
@@ -128,10 +134,5 @@
   },
   "nginx": {
     "enabled":false
-  },
-  "stripe": {
-	"apiKey": "pk_test_7eOFEUEwXbFTxXitYz7Q8s4J00sWRxGzUA",
-	"backendPlatform": "magento1",
-	"paymentMethodCode": "stripe_payments"
   }
 }

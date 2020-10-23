@@ -6,7 +6,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
-    ingress.kubernetes.io/configuration-snippet": |2
+    ingress.kubernetes.io/configuration-snippet: |2
       gzip on;
       gzip_proxied any;
       gzip_types
@@ -20,38 +20,25 @@ metadata:
 spec:
   tls:
   - hosts:
-    - echo1.example.com
-    - echo2.example.com
+    - prod.capitools.co.uk
     secretName: echo-tls
   rules:
-      - host: www.yourdomain.com
+    - host: prod.capitools.co.uk
       http:
         paths:
           - path: /
             backend:
               serviceName: vue-storefront
               servicePort: 3000
-          - path /assets
+          - path: /assets
             backend:
               serviceName: vue-storefront
               servicePort: 3000
----
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
-metadata:
-  name: vue-storefront-api
-  annotations:
-    kubernetes.io/ingress.class: nginx
-spec:
-  rules:
-      - host: api.yourdomain.com
-      http:
-        paths:
           - path: /api
             backend:
               serviceName: vue-storefront-api
               servicePort: 8080
-          - path /img
+          - path: /img
             backend:
               serviceName: vue-storefront-api
               servicePort: 8080
