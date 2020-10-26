@@ -1,0 +1,138 @@
+{
+  "server": {
+    "host": "0.0.0.0"
+  },
+  "api": {
+    "url": "https://prod.capitools.co.uk"
+  },
+  "elasticsearch": {
+    "index": "vue_storefront_catalog"
+  },
+  "redis": {
+    "host": "10.245.176.214",
+    "port": "6379",
+    "db": 0,
+    "auth": false
+  },
+  "defaultStoreCode": "capitools",
+  "storeViews": {
+    "multistore": false,
+    "commonCache": false,
+    "mapStoreUrlsFor": [
+      "capitools",
+      "it"
+    ],
+    "capitools":{
+      "storeCode": "capitools_website",
+      "storeId": 11,
+      "name": "Capitools Store",
+      "url": "/",
+      "appendStoreCode": true,
+      "elasticsearch": {
+        "host": "/api/catalog",
+        "index": "vue_storefront_catalog"
+      },
+      "tax": {
+        "sourcePriceIncludesTax": false,
+        "defaultCountry": "UK",
+        "defaultRegion": "",
+        "calculateServerSide": true
+      },
+      "i18n": {
+        "fullCountryName": "United Kingdom",
+        "fullLanguageName": "German",
+        "defaultLanguage": "EN",
+        "defaultCountry": "EN",
+        "defaultLocale": "en-UK",
+        "currencyCode": "GBP",
+        "currencySign": "GBP",
+        "dateFormat": "HH:mm D-M-YYYY"
+      },
+      "seo": {
+        "defaultTitle": "Vue Storefront"
+      }
+    }
+  },
+  "entities": {
+    "category": {
+      "categoriesDynamicPrefetch": false
+    },
+    "productList": {
+      "includeFields": [
+        "activity",
+        "configurable_children.attributes",
+        "configurable_children.id",
+        "configurable_children.final_price",
+        "configurable_children.color",
+        "configurable_children.original_price",
+        "configurable_children.original_price_incl_tax",
+        "configurable_children.price",
+        "configurable_children.price_incl_tax",
+        "configurable_children.size",
+        "configurable_children.sku",
+        "configurable_children.special_price",
+        "configurable_children.special_price_incl_tax",
+        "configurable_children.tier_prices",
+        "final_price",
+        "id",
+        "image",
+        "name",
+        "new",
+        "original_price_incl_tax",
+        "original_price",
+        "price",
+        "price_incl_tax",
+        "product_links",
+        "sale",
+        "special_price",
+        "special_to_date",
+        "special_from_date",
+        "special_price_incl_tax",
+        "status",
+        "tax_class_id",
+        "tier_prices",
+        "type_id",
+        "url_path",
+        "url_key",
+        "*image",
+        "*sku",
+        "*small_image",
+	    "stock.is_in_stock"
+      ]
+    }
+  },
+  "images": {
+    "baseUrl": "http://prod.capitools.co.uk/img/"
+  },
+  "demomode": false,
+  "tax": {
+    "defaultCountry": "UK"
+  },
+  "shipping": {
+    "methods": [
+      {
+        "method_title": "Shipping"
+      }
+    ]
+  },
+  "i18n": {
+  "defaultCountry": "UK",
+  "availableLocale": [
+    "en-UK"
+  ],
+  "defaultLocale": "en-UK",
+  "currencyCode": "GBP",
+  "currencySign": "£",
+  "fullCountryName": "United Kingdom"
+  },
+  "mailer": {
+    "contactAddress": "info@capitools.co.uk"
+  },
+  "theme": "@vue-storefront/theme-capybara",
+  "analytics": {
+    "id": false
+  },
+  "nginx": {
+    "enabled":false
+  }
+}

@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vue-storefront
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vue-storefront
+  template:
+    metadata:
+      labels:
+        app: vue-storefront
+    spec:
+      restartPolicy: Always
+      containers:
+      - name: vue-storefront
+        image: docker.pkg.github.com/it-jonction/vue-storefront/vue-storefront:0.0.21
+        envFrom:
+        - configMapRef:
+            name: vue-storefront-config
+        ports:
+        - containerPort: 3000
+        volumeMounts:
+        - mountPath: /var/www/var
+          name: code
+      volumes:
+      - name: code
+        emptyDir:
+          medium: Memory
+      imagePullSecrets:
+        - name: regcred
