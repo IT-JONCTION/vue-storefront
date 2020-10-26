@@ -15,7 +15,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: vue-storefront
-        image: docker.pkg.github.com/it-jonction/vue-storefront/vue-storefront:0.0.14
+        image: docker.pkg.github.com/it-jonction/vue-storefront/vue-storefront:0.0.21
         envFrom:
         - configMapRef:
             name: vue-storefront-config

@@ -26,10 +26,6 @@ spec:
     - host: prod.capitools.co.uk
       http:
         paths:
-          - path: /
-            backend:
-              serviceName: vue-storefront
-              servicePort: 3000
           - path: /assets
             backend:
               serviceName: vue-storefront
@@ -42,3 +38,7 @@ spec:
             backend:
               serviceName: vue-storefront-api
               servicePort: 8080
+          - path: /
+            backend:
+              serviceName: vue-storefront
+              servicePort: 3000

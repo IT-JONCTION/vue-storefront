@@ -1,12 +1,12 @@
 {
   "server": {
-    "host": "localhost"
+    "host": "0.0.0.0"
   },
   "api": {
-    "url": "http://prod.capitools.co.uk"
+    "url": "https://prod.capitools.co.uk"
   },
   "elasticsearch": {
-    "index": "vue_storefront_capitools_production"
+    "index": "vue_storefront_catalog"
   },
   "redis": {
     "host": "10.245.176.214",
@@ -30,7 +30,7 @@
       "appendStoreCode": true,
       "elasticsearch": {
         "host": "/api/catalog",
-        "index": "vue_storefront_capitools_production"
+        "index": "vue_storefront_catalog"
       },
       "tax": {
         "sourcePriceIncludesTax": false,
