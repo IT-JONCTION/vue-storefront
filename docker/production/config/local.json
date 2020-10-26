@@ -49,7 +49,7 @@
         "dateFormat": "HH:mm D-M-YYYY"
       },
       "seo": {
-        "defaultTitle": "Vue Storefront"
+        "defaultTitle": "Capitools UK"
       }
     }
   },
@@ -97,12 +97,12 @@
         "*image",
         "*sku",
         "*small_image",
-	    "stock.is_in_stock"
+        "stock.is_in_stock"
       ]
     }
   },
   "images": {
-    "baseUrl": "http://prod.capitools.co.uk/img/"
+    "baseUrl": "https://prod.capitools.co.uk/img/"
   },
   "demomode": false,
   "tax": {
@@ -116,14 +116,14 @@
     ]
   },
   "i18n": {
-  "defaultCountry": "UK",
-  "availableLocale": [
-    "en-UK"
-  ],
-  "defaultLocale": "en-UK",
-  "currencyCode": "GBP",
-  "currencySign": "£",
-  "fullCountryName": "United Kingdom"
+    "defaultCountry": "UK",
+    "availableLocale": [
+      "en-UK"
+    ],
+    "defaultLocale": "en-UK",
+    "currencyCode": "GBP",
+    "currencySign": "£",
+    "fullCountryName": "United Kingdom"
   },
   "mailer": {
     "contactAddress": "info@capitools.co.uk"
