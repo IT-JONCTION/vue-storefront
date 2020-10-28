@@ -10,6 +10,7 @@
 	path = src/themes/capybara
 	url = https://github.com/IT-JONCTION/vsf-capybara.git
 	branch = master
+	branc = itjl
 [submodule "src/modules/payment-stripe"]
 	path = src/modules/payment-stripe
 	url = https://github.com/IT-JONCTION/vsf-payment-stripe.git
