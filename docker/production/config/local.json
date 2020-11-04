@@ -6,7 +6,7 @@
     "url": "https://prod.capitools.co.uk"
   },
   "elasticsearch": {
-    "index": "vue_storefront_catalog"
+    "index": "vue_storefront_catalog_11"
   },
   "redis": {
     "host": "10.245.176.214",
@@ -30,7 +30,7 @@
       "appendStoreCode": true,
       "elasticsearch": {
         "host": "/api/catalog",
-        "index": "vue_storefront_catalog"
+        "index": "vue_storefront_catalog_11"
       },
       "tax": {
         "sourcePriceIncludesTax": false,
