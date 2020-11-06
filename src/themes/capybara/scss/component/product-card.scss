@@ -1,0 +1,178 @@
+.sf-product-card{
+    border: 1px solid var(--c-light);
+    border-radius: 3px;
+    margin: 10px;
+    padding: 0;
+    @include for-mobile {
+        margin: 5px!important;
+    }
+    &__image-wrapper{
+        height: 226px;
+        @media screen and (max-width: 600px){
+            height: 140px;
+        }
+        a{
+            display: block;
+            height: 100%;
+            .sf-image{
+                height: 100%;
+                img{
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+    a{
+        padding: 0 15px;
+        margin-bottom: 10px;
+        .sf-image{
+            margin: 0 auto;
+            display: block;
+            &:after{
+                display: none;
+            }
+            img{
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: none;
+            }
+        }
+        .d-flex{
+            @media screen and (max-width: 600px){
+                flex-direction: column;
+            }
+        }
+        .sf-product-card__title{
+            margin: 0;
+            font-size: 14px;
+            height: 44px;
+            overflow: hidden;
+        }
+    }
+    &__image-wrapper{
+        + .sf-product-card__link{
+            border-bottom: 1px solid var(--c-light);
+            @media screen and (max-width: 600px){
+                padding: 0 10px;
+            }
+        }
+        .sf-circle-icon{
+            display: none;
+        }
+    }
+    .a-product-rating{
+        .product__rating{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .sf-rating{
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+            .sf-rating{
+                &__icon{
+                  --icon-color: var(--_c-orange-primary);
+                  &--negative {
+                        --icon-color: var(--c-gray-variant);
+                    }
+                }
+              }
+            .product__count{
+                font-size: 12px;
+                line-height: normal;
+                align-items: flex-start;
+                margin: 0;
+            }
+        }
+    }
+    &__wishlist-icon{
+        display: none;
+    }
+}
+
+.products__grid{
+    justify-content: flex-start!important;
+    .products__product-card{
+        max-width: 24%;
+        @media screen and (max-width: 1400px){
+            max-width: 22.8%;
+        }
+        @media screen and (max-width: 1233px){
+            max-width: 31%;
+        }
+        @media screen and (max-width: 900px){
+            max-width: 30.5%;
+        }
+        @media screen and (max-width: 767px){
+            max-width: 48%;
+        }
+    }
+}
+
+.products-list{
+    .sf-product-card-horizontal{
+        border: 1px solid var(--c-light);
+        border-radius: 3px;
+        margin: 10px;
+        padding: 0;
+        &__main{
+            justify-content: space-between;
+            padding: 15px;
+        }
+        &__add-to-cart{
+            display: none;
+        }
+        &__link--image{
+            min-width: 200px;
+            padding: 10px;
+        } 
+        &__details{
+            width: calc(100% - 300px);
+            .sf-link{
+                .description{
+                    p{
+                        font-size: 12px;
+                        height: 100px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;  
+                        -webkit-line-clamp: 6;                        
+                    }
+                }
+            }
+        }
+        &__actions-wrapper{
+            max-width: 300px;
+            padding: 10px;
+            .sf-price{
+                width: 100%;
+            }
+            .out-of-stock,
+            .stock{
+                width: 100%;
+                &::before{
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    vertical-align: middle;
+                }
+            }
+            .a-add-to-cart{
+                max-width: 100%;
+            }
+        }
+
+    }
+}
+
+.sf-rating{
+    &__icon{
+      --icon-color: var(--_c-orange-primary);
+      &--negative {
+            --icon-color: var(--c-gray-variant);
+        }
+    }
+  }

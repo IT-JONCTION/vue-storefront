@@ -1,0 +1,44 @@
+.sf-breadcrumbs {
+    &__list{
+        &-item{
+            &:first-child{
+                &:before{
+                    display: none;
+                }
+                width: 25px;
+                height: 25px;
+                display: inline-block;
+                color: transparent!important;
+                overflow: hidden;
+                background-image: url('/assets/icons/home-icon.png');
+                background-repeat: no-repeat;
+                background-size: 18px;
+                background-position: center;
+                a{
+                    display: block;
+                    color: transparent!important;
+                }
+            }
+            a{
+                font-family: 'Poppins-Bold';
+                font-size: 14px;
+            }
+            &:before{
+                content: ''!important;
+                width: 6px;
+                height: 6px;
+                display: inline-block;
+                border-right: 2px solid var(--_c-dark-secondary);
+                border-top: 2px solid var(--_c-dark-secondary);
+                transform: rotate(45deg);
+                padding: 0!important;
+                margin: 0 15px;
+            }
+            &:last-child{
+                a{
+                    color: var(--_c-green-primary-lighten);
+                }
+            }
+        }
+    }
+}

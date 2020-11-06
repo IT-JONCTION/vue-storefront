@@ -1,0 +1,110 @@
+.header-menu{
+    position: relative;
+    .sf-mega-menu{
+        box-shadow: 0px 100vh 0 100vh rgba(0, 0, 0, 0.7);
+    }
+    .sf-header-navigation-item{
+        width: 200px;
+        flex: inherit;
+        a{
+            border: 0;
+            padding: 12px;
+            display: block;
+            margin: 0 auto;
+            font-family: 'Poppins-Regular';
+            text-transform: none;
+            font-weight: normal;
+            &:hover{
+                color: var(--_c-green-primary-lighten);
+            }
+            &.router-link-active{
+                background-color: var(--_c-green-primary-lighten);
+                color: var(--c-white);
+                font-family: 'Poppins-Bold';
+            }
+        }
+        .m-menu{
+            border-top: 1px solid var(--_c-green-primary-lighten);
+            .sf-mega-menu,
+            .aside-menu{
+                min-height: 300px;
+                @media screen and (max-width: 1024px){
+                    height: auto;
+                }
+            }
+            .sf-mega-menu{
+                &__menu{
+                    width: 100%;
+                    flex-wrap: wrap;
+                    height: 220px;
+                    a, p, span{
+                        font-size: 12px;
+                        padding: 0;
+                    }
+                    h3{
+                        font-family: 'Poppins-Bold';
+                        font-weight: normal;
+                        font-size: 16px;
+                        text-transform: none;
+                        color: var(--_c-green-primary-lighten);
+                        margin-bottom: 12px;
+                        padding: 0 8px;
+                    }
+                    ul{
+                        li{
+                            margin: 0;
+                            a{
+                                padding: 5px 8px;
+                                &.router-link-active{
+                                    color: var(--c-white);
+                                    span{
+                                        color: var(--c-white);
+                                    }
+                                }
+                            }
+                            &:hover{
+                                a{
+                                    color: var(--_c-green-primary-lighten);
+                                    span{
+                                        color: var(--_c-green-primary-lighten);
+                                        font-weight: normal;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .sf-mega-menu-column{
+                        margin-right: 2vw;
+                        margin-bottom: 15px;
+                        width: 21%;
+                    }
+                }
+                &__content{
+                    max-width: 1080px;
+                    width: 100%;
+                    padding: 40px 0;
+                }
+            }
+            .aside-menu{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                .aside-banner{
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.mobile-menu{
+    .sf-mega-menu{
+        &__menu{
+            h3{
+                font-family: 'Poppins-Bold';
+                color: var(--_c-green-primary-lighten);
+            }
+        }
+    }
+}

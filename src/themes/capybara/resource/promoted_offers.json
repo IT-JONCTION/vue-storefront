@@ -1,0 +1,18 @@
+{
+  "menuAsideBanners": [
+    {
+      "type": "mobile",
+      "image": {
+        "webp": "/assets/banner/png/jardinage-menu-banner.jpg",
+        "fallback": "/assets/banner/png/jardinage-menu-banner.jpg"
+      }
+    },
+    {
+      "type": "desktop",
+      "image": {
+        "webp": "/assets/banner/png/jardinage-menu-banner.jpg",
+        "fallback": "/assets/banner/png/jardinage-menu-banner.jpg"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+.quantity{
+    margin: 20px 0;
+    label{
+        font-size: 12px;
+    }
+}
+
+.sf-quantity-selector{
+    margin: 0 5px;
+    padding: 2px;
+    border-radius: 2px;
+    border: 1px solid var(--c-light);
+    width: 90px;
+    height: auto;
+    .sf-input{
+        height: 20px;
+        input{
+            font-size: 13px;
+        }
+    }
+    .sf-button{
+        font-family: 'Poppins-Medium';
+        border-radius: 2px;
+        width: 20px;
+        height: 20px;
+        --button-background: var(--c-light);
+        &:hover{
+            color: var(--c-white);
+            background-color: var(--_c-green-primary-lighten);
+        }
+    }
+}

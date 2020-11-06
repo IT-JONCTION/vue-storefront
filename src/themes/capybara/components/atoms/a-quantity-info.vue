@@ -1,0 +1,49 @@
+<template>
+    <div class="quantity-info">
+        <div class="d-flex align-center"> 
+             <SfImage
+                src="/assets/icons/livraisonGratuite-Icon.png"
+                alt="Livraison Gratuite"
+                class="icon"
+                />
+             <p>Free delivery</p>
+        </div>
+        <div class="d-flex align-center"> 
+             <SfImage
+                src="/assets/icons/calendar-icon.png"
+                alt="Calendar"
+                class="icon"
+                />
+             <p>Delivery within 10 days</p>
+        </div>
+    </div>
+</template>
+
+<script>
+    import { SfImage } from '@storefront-ui/vue';
+    export default {
+        name: 'AQuantityInfo',
+        components: { SfImage },
+    };
+</script>
+
+<style lang="scss" scoped>
+    .quantity-info{
+        padding-bottom: 7px;
+        margin: 7px 0;
+        border-bottom: 1px solid var(--c-light);
+        .d-flex{
+            margin-bottom: 7px; 
+        }
+        .sf-image{
+            width: 21px;
+            height: 21px;
+            object-fit:contain;
+            margin-right: 10px;
+        }
+        p{
+            font-size: 12px;
+            margin: 0;
+        }
+    }
+</style>

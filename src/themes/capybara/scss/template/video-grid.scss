@@ -1,0 +1,32 @@
+.video-grid{
+    display: flex;
+    width: 100%;
+    padding: 40px 0;
+    @media screen and (max-width: 1024px){
+        flex-wrap: wrap;
+    }
+    .video-item{
+        width: 33%;
+        position: relative;
+        padding-bottom: 17.5%;
+        height: 0;
+        margin: 0 1vw;
+        @media screen and (max-width: 1024px){
+            width: 47.5%;
+            padding-bottom: 26.5%;
+            margin-bottom: 2vw;
+        }
+        @media screen and (max-width: 480px){
+            width: 100%;
+            padding-bottom: 54.5%;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+    }
+} 

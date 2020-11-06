@@ -1,0 +1,18 @@
+{
+  "images": [
+    {
+      "className": "sf-hero-item--position-bg-top-left sf-hero-item--align-right",
+      "image": {
+        "webp": "/assets/banner/png/banner-01.png",
+        "fallback": "/assets/banner/png/banner-01.png"
+      }
+    },
+    {
+      "className": "sf-hero-item--position-bg-top-left sf-hero-item--align-right",
+      "image": {
+        "webp": "/assets/banner/png/banner-02.png",
+        "fallback": "/assets/banner/png/banner-02.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+#product{
+    .product{
+        &__info{
+            > .d-flex.align-start{
+                @include for-tablet{
+                    flex-direction: column;
+                }
+                @include for-mobile{
+                    flex-direction: column;
+                    padding: 0 15px;
+                }
+            }
+            .m-product-short-info{
+                margin: 0 7px;
+                @include for-mobile{
+                    padding: 0;
+                    margin: 0;
+                    width: -webkit-fill-available;
+                }
+                .product__header{
+                    @include for-mobile{
+                        margin: 0;
+                    }
+                    h3{
+                        font-family: 'Poppins-Bold';
+                        font-size: 24px;
+                        line-height: normal;
+                    }
+                }
+                hr{
+                    border-color: var(--_c-gray-accent);
+                }
+                .reference{
+                    font-size: 12px;
+                    color: var(--c-black);
+                }
+                .product__price-and-rating{
+                    margin: 10px 0;
+                }
+                .product__description{
+                    font-size: 14px;
+                    line-height: normal;
+                    height: 80px;
+                    overflow: hidden;
+                    p, ul li{
+                        font-size: 14px;
+                        line-height: normal;
+                    }
+                }
+                .garantie-product{
+                    .sf-image{
+                        > img{
+                            width: 80px;
+                            margin: 0 auto;
+                            display: block;
+                        }   
+                    }
+                }
+            }
+            .quantity-section{
+                margin: 0 7px;
+                p{
+                    font-size: 13px;
+                }
+                .sf-add-to-cart{
+                    .sf-price{
+                        height: auto;
+                        + p{
+                            margin: 0;
+                            font-size: 9px;
+                        }
+                    }
+                    .coupon-code{
+                        background-color: var(--_c-gray-accent);
+                        border-radius: 3px;
+                        padding: 10px;
+                        margin: 10px 0;
+                        p{
+                            font-size: 10px;
+                            margin: 0; 
+                            span{
+                                color: var(--c-white);
+                                background-color: var(--_c-green-primary-lighten);
+                                padding: 2px;
+                                font-size: 8px;
+                                border-radius: 50%;
+                                display: inline-block;
+                                width: 12px;
+                                text-align: center;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+                .a-add-to-cart{
+                    max-width: 100%;
+                    color: var(--c-white);
+                    background-color: var(--_c-green-secondary);
+                    border-color: var(--_c-green-secondary);
+                    &[disabled='disabled']{
+                        opacity: 0.3;
+                    }
+                }
+                .payment-security{
+                    .sf-image{
+                        margin-right: 10px;
+                        img{
+                            width: 21px;
+                            height: 21px;
+                            object-fit: contain;
+                        }
+                    }
+                    p{
+                        font-size: 12px;
+                        margin: 0;
+                    }
+                }
+            }
+        }   
+    }
+    .product__bottom{
+        .sf-tabs{
+            &__content{
+                &__tab{
+                    padding: 0px;
+                    .description{
+                        p{
+                            white-space: break-spaces;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

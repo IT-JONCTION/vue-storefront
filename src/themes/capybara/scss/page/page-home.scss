@@ -1,0 +1,251 @@
+#home{
+    background-color: var(--_c-light-primary);
+    .about-us{
+        .sf-call-to-action{
+            .sf-call-to-action__text-container{
+                margin: 0 auto;
+                width: 100%;
+                .content{
+                    padding: 60px 0;
+                    align-items: center;
+                    @include for-tablet {
+                        flex-direction: column;
+                    }
+                    @include for-mobile {
+                        flex-direction: column;
+                    }
+                    img{
+                        max-width: 370px;
+                        width: 100%;
+                        height: auto;
+                        margin:  0 3vw;
+                    }
+                    .content_right{
+                        max-width: 620px;
+                        margin: 0 auto;
+                        h4{
+                            font-size: 20px;
+                            font-family: 'Poppins-Bold';
+                        }
+                        p{
+                            font-size: 12px;
+                            a, b{
+                                font-family: 'Poppins-Bold';
+                            }
+                            a{
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+
+    }
+
+    .sf-section.section{
+        margin: 80px 0;
+    }
+
+    .product-slider{
+        margin: 70px 0;
+        .slider-content{
+            background-color: var(--c-white);
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid var(--c-light);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            @media screen and (max-width: 767px){
+                flex-direction: column;
+            }
+            .slider-banner{
+                display: block;
+                width: 360px;
+                @media screen and (max-width: 767px){
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .sf-carousel{
+
+                &__wrapper{
+                    max-width: 100%;
+                    padding-bottom: 40px;
+                    .glide{
+                        .glide{
+                            &__track{
+                                ul{
+                                    li{
+                                    
+                                        .sf-product-card{
+                                            max-width: -webkit-fill-available;
+                                            width: 100%;
+                                            margin: 0!important;
+                                            border-radius: 0;
+                                            border-right: 0;
+                                            border-top: 0;
+                                            &__image-wrapper{
+                                                height: 170px;
+                                                text-align: center;
+                                                a{
+                                                    padding: 15px;
+                                                }
+                                                + .sf-link{
+                                                    border: 0;
+                                                }
+                                            }
+                                            .a-product-rating{
+                                                .product__rating{
+                                                    flex-direction: row;
+                                                    .product__count{
+                                                        margin: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &__controls{
+                    top: auto;
+                    bottom: -5px;
+                    button{
+                        height: 25px;
+                        border-radius: 2px;
+                        margin: 0 15px;
+                        &:hover{
+                            background-color: var(--c-light );
+                            box-shadow: none;
+                            svg{
+                                fill: var(--_c-dark-primary);
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 1024px){
+                        display: flex;
+                    }
+                    @media screen and (max-width: 767px){
+                       bottom: auto;
+                       top: -18px;
+                       display: flex;
+                       z-index: 1;
+                       button{
+                           background-color: var(--_c-green-primary-lighten);
+                           .sf-icon{
+                               svg{
+                                   fill: var(--c-white);
+                               }
+                           }
+                       }
+                    }
+                    .sf-arrow{
+                        .sf-icon{
+                            svg{
+                                display: block;
+                            }
+                            &:before{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cms-content{
+        max-width: 1270px;
+        margin: 20px auto;
+        padding: 0 10px;
+        #mkpSection{
+            background-color: var(--c-white);
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid var(--c-light);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            .mkpHeader{
+                display: flex;
+                align-items: center;
+                padding: 0 3vw;
+                @media screen and (max-width: 1024px){
+                    flex-direction: column;
+                } 
+                img{
+                    max-width: 260px;
+                    width: 100%;
+                    margin: 15px 0;
+                    margin-right: 4vw;
+                }
+                .mkpHeaderDiv{
+                    padding: 30px 0;
+                    .mkpHeaderTitle{
+                        font-family: 'Poppins-Bold';
+                        color: var(--_c-green-primary-lighten);
+                        font-size: 20px;
+                        margin: 0;
+                    }
+                    p{
+                        font-size: 14px;
+                        @media screen and (max-width: 1024px){
+                            text-align: center;
+                        } 
+                    }
+                }
+            }
+        }
+       
+    }
+
+    #homeGrid {
+        display: grid;
+        gap: 2rem;
+        grid-auto-rows: auto;
+        @media screen and (min-width: 600px){
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        div{
+            background-color: var(--c-white);
+            border-radius: 5px;
+            img{
+                width: 100%;
+            }
+            h3{
+                font-family: 'Poppins-Bold';
+                color: var(--_c-green-primary-lighten);
+                margin-bottom: 0;
+            }
+            p{
+                font-size: 12px;
+                margin: 0;
+            }
+            .info{
+                padding: 0 15px;
+                padding-bottom: 15px;
+            }
+            &:nth-child(4),
+            &:nth-child(5) { 
+                padding: 15px;
+                h3{
+                    margin: 0;
+                }
+                *{
+                    color: var(--c-white);
+                }
+            }
+            &:nth-child(4) {
+                background-color: var(--c-light-green);
+                @media screen and (min-width: 600px){
+                    grid-column: 1/3;
+                }
+            }
+            &:nth-child(5) {
+                background-color: var(--_c-green-primary);
+            }
+        }
+    }
+}
