@@ -6,10 +6,6 @@
 	path = src/modules/vsf-cache-varnish
 	url = https://github.com/new-fantastic/vsf-cache-varnish.git
 	branch = master
-[submodule "src/themes/capybara"]
-	path = src/themes/capybara
-	url = https://github.com/IT-JONCTION/vsf-capybara.git
-	branch = itjl
 [submodule "src/modules/payment-stripe"]
 	path = src/modules/payment-stripe
 	url = https://github.com/IT-JONCTION/vsf-payment-stripe.git
